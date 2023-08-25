@@ -1,0 +1,15 @@
+{{template "header" .}}
+    <div class="content-wrapper">
+        <form class="fs" action="javascript:void(0);" onsubmit="addPattern();" align="center">
+            <div class="field">
+                <input type="text" id="pattern" name="pattern" placeholder="Pattern">
+                <label for="pattern">Pattern</label>
+            </div>
+            <div class="submit-fs">
+                <label>Add pattern<input type="submit"></label>
+            </div>
+        </form>
+        <div class="patterns" id="patterns"></div>
+    </div>
+    <script src="../static/js/settings.js"></script>
+{{template "footer" .}}

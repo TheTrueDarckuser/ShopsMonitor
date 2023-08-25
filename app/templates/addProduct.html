@@ -1,0 +1,26 @@
+{{template "header" .}}
+    <div class="content-wrapper">
+        <form class="fs" action="javascript:void(0);" onsubmit="addProduct();" align="center">
+                <div class="field">
+                    <input type="text" id="name" name="name" placeholder="Name">
+                    <label for="name">Name</label>
+                </div>
+                <div class="field">
+                    <input type="url" id="shop_url" name="shop_url" placeholder="Shop URL">
+                    <label for="shop_url">Shop URL</label>
+                </div>
+                <div class="field">
+                    <input type="url" id="link" name="link" placeholder="Product URL">
+                    <label for="link">Product URL</label>
+                </div>
+                <div class="field">
+                    <input type="url" id="photo_url" name="photo_url" placeholder="Photo URL" value="https://banner2.kisspng.com/20171216/b7d/sandals-png-image-5a34e58d0bdcd4.6333344615134160770486.jpg">
+                    <label for="photo_url">Photo URL</label>
+                </div>
+                <div class="submit-fs">
+                    <label>Add<input type="submit"></label>
+                </div>
+        </form>
+    </div>
+    <script src="../static/js/addProduct.js"></script>
+{{template "footer" .}}

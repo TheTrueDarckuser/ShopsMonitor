@@ -1,0 +1,22 @@
+{{template "header" .}}
+    <div class="content-wrapper">
+        <form class="fs" action="javascript:void(0);" onsubmit="join();" align="center">
+            <div class="field">
+                <input type="text" id="username" name="username" placeholder="Username">
+                <label for="name">Username</label>
+            </div>
+            <div class="field">
+                <input type="password" id="password" name="password" placeholder="Password">
+                <label for="link">Password</label>
+            </div>
+            <div class="field">
+                <input type="text" id="invite_key" name="invite_key" placeholder="Invite key">
+                <label for="shop_url">Invite key</label>
+            </div>
+            <div class="submit-fs">
+                <label>Add<input type="submit"></label>
+            </div>
+        </form>
+    </div>
+    <script src="../static/js/auth.js"></script>
+{{template "footer" .}}

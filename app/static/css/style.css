@@ -1,0 +1,420 @@
+/* ------------------------------------- Common ------------------------------------- */
+
+* { 
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Raleway', sans-serif;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+html, body {
+    position: relative;
+    min-height: 100vh;
+}
+
+.content-wrapper {
+    width: 100%;
+    min-height: calc(97vh - 3.2em);
+    padding-bottom: 3.2em;
+    background: #f1f1f1;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+/* ------------------------------------- Nav ------------------------------------- */
+
+nav {
+    position: relative;
+    display: block;
+    background: rgb(50, 49, 131);
+    color: #FFF;
+    left: 0; top: 0;
+    width: 100%;
+    z-index: 1;
+    height: 3em;
+}
+
+nav input {
+    display: none;
+}
+
+nav label {
+    cursor: pointer;
+    display: block;
+    font-size: 1.5em;
+    padding: 0.375em;
+}
+
+#menu-icon, #menu-icon:after, #menu-icon:before {
+    display: block;
+    background: #FFF;
+    border-radius: 0.05em;
+    height: 0.15em;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    float: right;
+    position: absolute;
+}
+
+#menu-icon {
+    width: 1.15em;
+    margin-top: 0.5em;
+    position: relative;
+}
+
+#menu-icon:before, #menu-icon:after { content: ''; position: absolute; }
+#menu-icon:before { top: -0.4em; }
+#menu-icon:after { bottom: -0.4em; height: 0.175em;}
+
+/*  ---- Close Icon ---- */
+nav input:checked + label #menu-icon {
+    background: transparent;
+}
+
+nav input:checked + label #menu-icon:before {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+nav input:checked + label #menu-icon:after {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+nav input:checked ~ #overlay {
+    background: rgb(50, 49, 131);
+    bottom: 0; right: 0;
+    top: 0; left: 0;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: -1;
+}
+
+nav ul {
+    font-size: 1.5em;
+    list-style: none;
+    margin: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+}
+
+nav input:checked ~ ul {
+    margin: 1em;
+    max-height: inherit;
+    opacity: 1;
+}
+
+nav ul > li {
+    margin-top: 0.5em;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------------------------- Footer ------------------------------------- */
+
+footer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: 1.5em;
+    width: 100%;
+    border-top: .05em solid black;
+}
+
+footer .text {      
+    color: black;
+    font-size: 0.8em;
+    padding-left: 0.2em;
+}
+
+footer a {
+    color: black;
+}
+
+/* ------------------------------------- Products ------------------------------------- */
+
+ul.products-list {
+    list-style: none;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 16.66666%);
+    align-items: center;
+    padding-bottom: 1em;
+}
+
+ul.products-list > li {
+    width: 100%;
+    text-align: center;
+    margin: 1.5em 0;
+}
+
+img.product-image {
+    max-height: 10em;
+    max-width: 8em;
+    width: auto;
+    height: auto;
+}
+
+.product-name {
+    font-weight: bold;
+    font-size: 0.9em;
+    overflow: hidden;
+}
+
+.control-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    width: 50%;
+}
+
+button.button-ignore, button.button-monitor {
+    margin-top: 0.4em;
+    padding: 0.4em;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+button.button-monitor {
+    border: 1px solid green;
+    color: green;
+}
+button.button-monitor:hover {
+    background: green;
+    color: white;
+}
+
+button.button-ignore {
+    border: 1px solid red;
+    color: red;
+}
+button.button-ignore:hover {
+    background: red;
+    color: white;
+}
+
+.horizontal-scroll-bar {
+    display: flex;
+    flex-direction: row;
+    overflow-y: scroll;
+}
+
+.horizontal-scroll-bar > label {
+    white-space: nowrap;
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+    padding: 1%;
+    transition: all 0.15s ease-in-out;
+    background-size: 90%;
+    margin: 0 auto; 
+}
+
+.horizontal-scroll-bar > label:hover {
+    background: rgba(50, 49, 131, 0.75);
+    color: white;
+}
+.horizontal-scroll-bar > label.checked {
+    background: rgb(50, 49, 131);
+    color: white;
+}
+
+.horizontal-scroll-bar > label > input {
+    visibility: hidden;
+    display: none;
+}
+
+/* ------------------------------------- AddProduct ------------------------------------- */
+.fs {
+    max-width: 40%;
+    margin: 0 auto;
+}
+
+.fs input[type="submit"] {
+    display: none;
+}
+
+.fs .submit-fs label {
+    display: block;
+    border: 0;
+    font-size: 1em;
+    text-decoration: none;
+    outline: none;
+    margin: 1em 0;
+    transition: all 0.15s ease-in-out;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.fs .submit-fs label:hover {
+    background: black;
+    color: white;
+}
+
+.fs .field {
+    display: flex;
+    flex-flow: column-reverse;
+    padding: 1% 0; 
+    padding-top: 25px;
+}
+  
+.fs input {
+    font-size: 1em;
+    padding: 0.2em 0.5em;
+    border: none;
+    outline: 0;
+    border: 1px solid grey;
+    border-radius: 4px;
+    background: none;
+    cursor: default;
+}
+
+.fs input[type="number"] {
+    appearance: none;
+}
+
+.fs input:focus {
+    cursor: text;
+}
+
+.fs-text a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+/* -------- */
+
+.load-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 25%;
+    margin: 0 auto;
+}
+
+.load-button {
+    display: block;
+    width: 10em;
+    margin: 1em auto;
+    padding: 0.2em;
+    font-size: 0.8em;
+    outline: none;
+    background: none;
+    border-radius: 6px;
+}
+
+.load-button:hover {
+    background: rgba(50, 49, 131, 0.8);
+    color: white;
+}
+
+/* ------------------------------------- Patterns ------------------------------------- */
+
+.patterns {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 33.33333%);
+    margin: 0 auto;
+    padding: 1em 0;
+    width: 80%;
+    justify-content: space-around;
+}
+
+.pattern {
+    display: block;
+    border: 1px solid lightgrey;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    padding: 0 1em;
+}
+
+.pattern:hover {
+    background: red;
+    color: white;
+}
+
+.checkbox-label {
+    display: flex;
+    justify-content: center;
+    border-radius: 6px;
+    font-size: 0.9em;
+}
+
+.checkbox-label::before {
+    content: "Enable patterns";
+    border: 1px solid rgba(0, 128, 0, 0.5);
+    padding: 0.2em;
+}
+
+.checkbox-label:hover::before {
+    background: green;
+    color: white;
+}
+
+#patchpatterns:checked ~ .checkbox-label::before {
+    content: "Disable patterns";
+    border: 1px solid rgba(255, 0, 0, 0.5);
+    padding: 0.2em;
+}
+
+#patchpatterns:checked ~ .checkbox-label:hover::before {
+    background: red;
+    color: white;
+}
+
+/* ------------------------------------- Search bar ------------------------------------- */
+.search-container {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    margin: 0 auto;
+    padding: 0.5em;
+  }
+  
+input#search-bar {
+    width: 100%;
+    height: 2em;
+    margin: 0 auto;
+    padding-left: 0.5em;
+    font-size: 1em;
+    border: 1px solid #D0CFCE;
+    outline: none;
+}
+  
+#search-bar:focus {
+    border: 1px solid rgba(50, 49, 131, 0.527);
+    transition: 0.35s ease;
+}
+
+select {
+    -webkit-appearance: none;
+    outline: none;
+    border: 1px solid #D0CFCE;
+    background: white;
+    font-size: 0.8em;
+    padding: 0.4em;
+    text-align-last: center;
+}

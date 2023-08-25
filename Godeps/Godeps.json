@@ -1,0 +1,187 @@
+{
+	"ImportPath": "/restock-monitor",
+	"GoVersion": "go1.11",
+	"GodepVersion": "v80",
+	"Packages": [
+		"/restock-monitor/app"
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/PuerkitoBio/goquery",
+			"Comment": "v1.4.1",
+			"Rev": "dc2ec5c7ca4d9aae063b79b9f581dd3ea6afd2b2"
+		},
+		{
+			"ImportPath": "github.com/andybalholm/cascadia",
+			"Comment": "v1.0.0",
+			"Rev": "901648c87902174f774fac311d7f176f8647bdaa"
+		},
+		{
+			"ImportPath": "github.com/bwmarrin/discordgo",
+			"Comment": "v0.18.0-4-g73f6772",
+			"Rev": "73f6772a2b7cc95e29c462e4f15bf07cbe0d3854"
+		},
+		{
+			"ImportPath": "github.com/gorilla/context",
+			"Comment": "v1.1.1",
+			"Rev": "08b5f424b9271eedf6f9f0ce86cb9396ed337a42"
+		},
+		{
+			"ImportPath": "github.com/gorilla/handlers",
+			"Comment": "v1.4.0",
+			"Rev": "7e0847f9db758cdebd26c149d0ae9d5d0b9c98ce"
+		},
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Comment": "v1.6.2-5-ge48e440",
+			"Rev": "e48e440e4c92e3251d812f8ce7858944dfa3331c"
+		},
+		{
+			"ImportPath": "github.com/gorilla/schema",
+			"Comment": "v1.0.2-1-ge0e4b92",
+			"Rev": "e0e4b92809ac79a1a465c2f626c34b121e0916bd"
+		},
+		{
+			"ImportPath": "github.com/gorilla/securecookie",
+			"Comment": "v1.1.1-2-g78f3d31",
+			"Rev": "78f3d318a8bf316cda921f25e96fd0b441c5173d"
+		},
+		{
+			"ImportPath": "github.com/gorilla/sessions",
+			"Comment": "v1.1.1",
+			"Rev": "03b6f63cc43ef9c7240a635a5e22b13180e822b8"
+		},
+		{
+			"ImportPath": "github.com/gorilla/websocket",
+			"Comment": "v1.4.0-2-g3130e8d",
+			"Rev": "3130e8d3f1986de7dc3fd86255f4ce9618677508"
+		},
+		{
+			"ImportPath": "github.com/klauspost/compress/flate",
+			"Comment": "v1.4.0-2-gb500177",
+			"Rev": "b50017755d442260d792c34c7c43216d9ba7ffc7"
+		},
+		{
+			"ImportPath": "github.com/klauspost/compress/gzip",
+			"Comment": "v1.4.0-2-gb500177",
+			"Rev": "b50017755d442260d792c34c7c43216d9ba7ffc7"
+		},
+		{
+			"ImportPath": "github.com/klauspost/compress/zlib",
+			"Comment": "v1.4.0-2-gb500177",
+			"Rev": "b50017755d442260d792c34c7c43216d9ba7ffc7"
+		},
+		{
+			"ImportPath": "github.com/klauspost/cpuid",
+			"Comment": "v1.1-4-ge7e905e",
+			"Rev": "e7e905edc00ea8827e58662220139109efea09db"
+		},
+		{
+			"ImportPath": "github.com/robertkrimen/otto",
+			"Rev": "15f95af6e78dcd2030d8195a138bd88d4f403546"
+		},
+		{
+			"ImportPath": "github.com/robertkrimen/otto/ast",
+			"Rev": "15f95af6e78dcd2030d8195a138bd88d4f403546"
+		},
+		{
+			"ImportPath": "github.com/robertkrimen/otto/dbg",
+			"Rev": "15f95af6e78dcd2030d8195a138bd88d4f403546"
+		},
+		{
+			"ImportPath": "github.com/robertkrimen/otto/file",
+			"Rev": "15f95af6e78dcd2030d8195a138bd88d4f403546"
+		},
+		{
+			"ImportPath": "github.com/robertkrimen/otto/parser",
+			"Rev": "15f95af6e78dcd2030d8195a138bd88d4f403546"
+		},
+		{
+			"ImportPath": "github.com/robertkrimen/otto/registry",
+			"Rev": "15f95af6e78dcd2030d8195a138bd88d4f403546"
+		},
+		{
+			"ImportPath": "github.com/robertkrimen/otto/token",
+			"Rev": "15f95af6e78dcd2030d8195a138bd88d4f403546"
+		},
+		{
+			"ImportPath": "github.com/valyala/bytebufferpool",
+			"Comment": "v1.0.0-1-gcdfbe93",
+			"Rev": "cdfbe9377474227bb42120c1e22fd4433e7f69bf"
+		},
+		{
+			"ImportPath": "github.com/valyala/fasthttp",
+			"Comment": "v1.0.0-1-g33b80a5",
+			"Rev": "33b80a5951ab04016906983ada65a0b31fb5ce57"
+		},
+		{
+			"ImportPath": "github.com/valyala/fasthttp/fasthttputil",
+			"Comment": "v1.0.0-1-g33b80a5",
+			"Rev": "33b80a5951ab04016906983ada65a0b31fb5ce57"
+		},
+		{
+			"ImportPath": "github.com/valyala/fasthttp/stackless",
+			"Comment": "v1.0.0-1-g33b80a5",
+			"Rev": "33b80a5951ab04016906983ada65a0b31fb5ce57"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/internal/subtle",
+			"Rev": "614d502a4dac94afa3a6ce146bd1736da82514c6"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/nacl/secretbox",
+			"Rev": "614d502a4dac94afa3a6ce146bd1736da82514c6"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/poly1305",
+			"Rev": "614d502a4dac94afa3a6ce146bd1736da82514c6"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/salsa20/salsa",
+			"Rev": "614d502a4dac94afa3a6ce146bd1736da82514c6"
+		},
+		{
+			"ImportPath": "golang.org/x/net/html",
+			"Rev": "9b4f9f5ad5197c79fd623a3638e70d8b26cef344"
+		},
+		{
+			"ImportPath": "golang.org/x/net/html/atom",
+			"Rev": "9b4f9f5ad5197c79fd623a3638e70d8b26cef344"
+		},
+		{
+			"ImportPath": "gopkg.in/mgo.v2",
+			"Comment": "r2016.08.01-7-g9856a29",
+			"Rev": "9856a29383ce1c59f308dd1cf0363a79b5bef6b5"
+		},
+		{
+			"ImportPath": "gopkg.in/mgo.v2/bson",
+			"Comment": "r2016.08.01-7-g9856a29",
+			"Rev": "9856a29383ce1c59f308dd1cf0363a79b5bef6b5"
+		},
+		{
+			"ImportPath": "gopkg.in/mgo.v2/internal/json",
+			"Comment": "r2016.08.01-7-g9856a29",
+			"Rev": "9856a29383ce1c59f308dd1cf0363a79b5bef6b5"
+		},
+		{
+			"ImportPath": "gopkg.in/mgo.v2/internal/sasl",
+			"Comment": "r2016.08.01-7-g9856a29",
+			"Rev": "9856a29383ce1c59f308dd1cf0363a79b5bef6b5"
+		},
+		{
+			"ImportPath": "gopkg.in/mgo.v2/internal/scram",
+			"Comment": "r2016.08.01-7-g9856a29",
+			"Rev": "9856a29383ce1c59f308dd1cf0363a79b5bef6b5"
+		},
+		{
+			"ImportPath": "gopkg.in/sourcemap.v1",
+			"Comment": "v1.0.5",
+			"Rev": "6e83acea0053641eff084973fee085f0c193c61a"
+		},
+		{
+			"ImportPath": "gopkg.in/sourcemap.v1/base64vlq",
+			"Comment": "v1.0.5",
+			"Rev": "6e83acea0053641eff084973fee085f0c193c61a"
+		}
+	]
+}

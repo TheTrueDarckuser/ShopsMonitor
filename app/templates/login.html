@@ -1,0 +1,19 @@
+{{template "header" .}}
+    <div class="content-wrapper">
+        <form class="fs" action="javascript:void(0);" onsubmit="login();" align="center">
+                <div class="field">
+                    <input type="text" id="username" name="username" placeholder="Username">
+                    <label for="name">Username</label>
+                </div>
+                <div class="field">
+                    <input type="password" id="password" name="password" placeholder="Password">
+                    <label for="link">Password</label>
+                </div>
+                <div class="submit-fs">
+                    <label>Sign in<input type="submit"></label>
+                </div>
+        </form>
+        <script src="../static/js/auth.js"></script>
+        <div class="fs-text" align="center">Don't have an account - <a href="/join">join</a></div>
+    </div>
+{{template "footer" .}}
